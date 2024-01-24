@@ -23,7 +23,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import com.hello.jdbc.domain.Member;
 import com.hello.jdbc.repository.IMemberRepository;
-import com.hello.jdbc.repository.MemberRepositoryV4_1;
+import com.hello.jdbc.repository.MemberRepositoryV5;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -56,7 +56,7 @@ class MemberServiceV4Test {
 
 		@Bean
 		IMemberRepository memberRepository() {
-			return new MemberRepositoryV4_1(dataSource());
+			return new MemberRepositoryV5(dataSource());
 		}
 
 		@Bean
